@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Postal de Amor 💖</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9acb, #ff5fa2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .card {
+            width: 700px;
+            height: 400px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .card.open .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-front {
+            background: #ff4f9a;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .card-back {
+            background: #fff0f7;
+            color: #b1005a;
+            transform: rotateY(180deg);
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .heart {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card" onclick="abrirPostal()">
+    <div class="card-inner" id="cardInner">
+        <div class="card-front">
+            <div>
+                <div class="heart">💖</div>
+                Toca aqui, amor
+            </div>
+        </div>
+        <div class="card-back">
+            <div>
+                Meu amor ❤️<br><br>
+                Eu sei que ja estas a dormir, 
+                mas quando vires isto eu ja estarei no 10 sono hahaha.
+                Eu quero que saibas que foste a melhor coisa 
+                que me aconteceu na vida. Eu sei que ando
+                complicado estes dias e peço imensas desculpas 
+                por estar assim e chatear-te. Eu fiz este postal se assim o poderemos
+                chamar para te escrever de uma forma diferente.
+                Eu amo conversar contigo por mensagem, por chamada e entao 
+                pessoalmente melhor ainda e como ja o disse várias vezes 
+                eu tenho suadades de estar contigo e de poder sentir o teu 
+                abraço, o teu toque, o teu cheiro, o teu beijo. Eu amo amar-te 
+                todos os dias, tu és muito importante e especial para mim
+                e eu nao sei viver sem ti, eu quero que sejas tu a 
+                mãe dos meus filhos, a minha futura mulher com quem vou casar,
+                com quem quero viver o resto da minha vida na nossa proria casa.
+                Desculpa mais uma vez por alguma coisa minha, por ser chato ás vezes, 
+                por te chatear, pelo mau humor ás vezes.
+                Quero-te fazer sentir amada e especial todos os dias, és a minha
+                estrela, a minha princesa, a minha bebé, o meu amor, és tudo para mim.
+                Quando eu digo "Onde está a minha bebézinha onde está" e tu respondes 
+                "Estou aquiiii" eu pareço uma criança toda feliz hahaha.
+                Acordar com o teu bom dia faz logo o meu inicio de dia ficar super bem acredita.
+                Beijinhosss amorrr 💋, amo-te muitooo meu amozinho❤️, beijinhosss amorrr 💋 <br><br>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function abrirPostal() {
+        document.querySelector('.card').classList.toggle('open');
+    }
+</script>
+
+</body>
+</html>
